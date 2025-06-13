@@ -1,14 +1,12 @@
-// Mobile Navigation Toggle
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 const navItems = document.querySelectorAll('.nav-links li');
 
 hamburger.addEventListener('click', () => {
-    // Toggle mobile menu
+
     navLinks.classList.toggle('active');
     hamburger.classList.toggle('active');
-    
-    // Animate nav items
+
     navItems.forEach((item, index) => {
         if (item.style.animation) {
             item.style.animation = '';
@@ -17,8 +15,6 @@ hamburger.addEventListener('click', () => {
         }
     });
 });
-
-// Close mobile menu when clicking a link
 navItems.forEach(item => {
     item.addEventListener('click', () => {
         navLinks.classList.remove('active');
@@ -29,7 +25,6 @@ navItems.forEach(item => {
     });
 });
 
-// Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -39,7 +34,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form validation for contact page
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
@@ -65,7 +59,6 @@ if (contactForm) {
     });
 }
 
-// Add animation to project cards on scroll
 const projectCards = document.querySelectorAll('.project-card');
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
