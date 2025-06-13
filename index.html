@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | Home</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hi, I'm <span>Ridhi Sai Pasupuleti</span></h1>
+                <p>BTech CSE Student | Aspiring Full-Stack Developer</p>
+                <a href="#projects" class="btn">View My Work</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img">
+                      <img src="images/minesweeper-game.jpg" alt="Minesweeper C++ game screenshot" loading="lazy">
+                    </div>
+                    <h3>Minesweeper</h3>
+                    <p>A C++ replica of classic minesweeper with GUI</p>
+                    <div class="tags">
+                        <span>C++</span>
+                        <span>OOP</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">
+                      <img src="images/motorcycle-dashboard.jpg" alt="Motorcycle parts sales analytics dashboard" loading="lazy">
+                    </div>
+                    <h3>Parts Sales Analytics</h3>
+                    <p>Interactive dashboard for motorcycle parts sales data</p>
+                    <div class="tags">
+                        <span>Chart.js</span>
+                        <span>PHP</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">
+                      <img src="images/WEB-design.jpg" alt="Portfolio Website Project" loading="lazy">
+                    </div>
+                    <h3>Portfolio Website</h3>
+                    <p>Responsive design with modern CSS</p>
+                    <div class="tags">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 My Portfolio</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+        
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
